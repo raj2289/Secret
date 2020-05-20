@@ -22,7 +22,7 @@ const userSchema={
 };
 userSchema.plugin(encrypt, {secret:process.env.API_KEY, encryptedFields: ["password"] });
 const User =mongoose.model("User",userSchema);
-const secret="Thisisourlittlesecret.";
+
 app.get("/",function(req,res){
   res.render("home");
 })
